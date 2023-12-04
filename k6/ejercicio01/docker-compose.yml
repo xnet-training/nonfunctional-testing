@@ -16,6 +16,8 @@ services:
     - sqldata:/var/opt/sqlserver/data
     - sqllog:/var/opt/sqlserver/log
     - sqlbackup:/var/opt/sqlserver/backup
+    networks:
+    - db
 ##
 ### Almacenamientos
 ##
@@ -25,3 +27,9 @@ volumes:
   sqldata:
   sqllog:
   sqlbackup:
+##
+## Redes
+##
+networks:
+  db:
+  microservices:
